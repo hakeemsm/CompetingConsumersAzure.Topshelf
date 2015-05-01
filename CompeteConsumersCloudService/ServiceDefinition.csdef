@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="CompeteConsumersCloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
+  <WorkerRole name="ProducerService" vmsize="Small">
+    <ConfigurationSettings>
+      <Setting name="ServiceBusConnectionString_Producer" />
+    </ConfigurationSettings>
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />
+    </Imports>
+  </WorkerRole>
+  <WorkerRole name="SubscriberService" vmsize="Small">
+    <ConfigurationSettings>
+      <Setting name="ServiceBusConnectionString_Subscriber" />
+      <Setting name="MessageStorageConnectionString" />
+    </ConfigurationSettings>
+    <Imports>
+      <Import moduleName="RemoteAccess" />
+    </Imports>
+  </WorkerRole>
+</ServiceDefinition>

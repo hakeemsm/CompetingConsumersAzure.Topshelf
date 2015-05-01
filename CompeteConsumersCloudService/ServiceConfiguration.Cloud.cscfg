@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CompeteConsumersCloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="ProducerService">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="ServiceBusConnectionString_Producer" value="Endpoint=sb://hmbus1.servicebus.windows.net/;SharedSecretIssuer=owner;SharedSecretValue=OCvdvCDCoMx2bdy4+dG0Y2zGDgTusJof8FNgx4TDyxg=" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="hmohamm" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBlQYJKoZIhvcNAQcDoIIBhjCCAYICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEByFkJg3YbuiQQJ10fYMe5swDQYJKoZIhvcNAQEBBQAEggEALOsKQAhUaA5O+c1uSgDKHHnnTKlByoEp3j650obCqxltNJpiyesJY9g2vS7P/VWyuqQF2aKhELUWeIseI37p9g1zhe/0A1yrjHdB0wIq1i3YmVvl/s1p6LEbQjFEkBXGg668Pz/gvEivHE2G/ItlhsE/UOb5s5jqTcRDXhvcpNnTtuBAlxvhtrz8nG0qdhWh4r2e+uWwvVHOtpe97X25O7CvQYsmvTNqqsrxjW6opWiLPS1N1en74oZ2udUvWL5ylXic3zpqebozifr12pS1J7EVn4lH9U10DTfMSt7AqPWHCbuyl8nhr4uWbTouBQ+4JcQ9t5R7yVwZbm+YZjrtMTArBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECHaSVYx5y5twgAiZCaujwTU7bg==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-04-29T23:59:59.0000000-04:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="DAC66CB5699855092AFC68B7A39552BB55D3BF6B" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="SubscriberService">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="ServiceBusConnectionString_Subscriber" value="Endpoint=sb://hmbus1.servicebus.windows.net/;SharedSecretIssuer=owner;SharedSecretValue=OCvdvCDCoMx2bdy4+dG0Y2zGDgTusJof8FNgx4TDyxg=" />
+      <Setting name="MessageStorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=ccmessagedata;AccountKey=HqcqPZRN0Y2OYEzULhXzdOXATwwOR1TBPJA5CIr+EsrN7kWFpfTFjZq+qmhEGeuxwKwTVvuwVblUua9BK9Kq+w==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="hmohamm" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBlQYJKoZIhvcNAQcDoIIBhjCCAYICAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEByFkJg3YbuiQQJ10fYMe5swDQYJKoZIhvcNAQEBBQAEggEALOsKQAhUaA5O+c1uSgDKHHnnTKlByoEp3j650obCqxltNJpiyesJY9g2vS7P/VWyuqQF2aKhELUWeIseI37p9g1zhe/0A1yrjHdB0wIq1i3YmVvl/s1p6LEbQjFEkBXGg668Pz/gvEivHE2G/ItlhsE/UOb5s5jqTcRDXhvcpNnTtuBAlxvhtrz8nG0qdhWh4r2e+uWwvVHOtpe97X25O7CvQYsmvTNqqsrxjW6opWiLPS1N1en74oZ2udUvWL5ylXic3zpqebozifr12pS1J7EVn4lH9U10DTfMSt7AqPWHCbuyl8nhr4uWbTouBQ+4JcQ9t5R7yVwZbm+YZjrtMTArBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECHaSVYx5y5twgAiZCaujwTU7bg==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2016-04-29T23:59:59.0000000-04:00" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="DAC66CB5699855092AFC68B7A39552BB55D3BF6B" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
